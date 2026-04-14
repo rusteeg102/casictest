@@ -1,0 +1,17 @@
+{
+  "name": "telegram-gift-cases",
+  "version": "1.0.0",
+  "description": "Развлекательное мини-приложение для Telegram с кейсами и подарками",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -p 8080",
+    "dev": "npx live-server --port=8080"
+  },
+  "keywords": ["telegram", "mini-app", "games"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  }
+}

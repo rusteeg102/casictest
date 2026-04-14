@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейсы с подарками</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="balance" id="balanceContainer">
+                <span class="star-icon">⭐</span>
+                <span id="balance">100</span>
+                <span class="plus-icon">+</span>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="cases">🎰 Кейсы</button>
+            <button class="tab-btn" data-tab="inventory">🎒 Инвентарь</button>
+        </div>
+
+        <div id="casesTab" class="tab-content">
+            <div class="cases-section">
+                <h2>🎁 Выбери кейс</h2>
+                <div class="cases-grid" id="casesGrid"></div>
+            </div>
+
+            <div class="spin-section" id="spinSection" style="display: none;">
+                <div class="case-display" id="caseDisplay">
+                    <div class="case-item" id="spinningItem"></div>
+                </div>
+                <button class="spin-btn" id="spinBtn">Крутить!</button>
+            </div>
+
+            <div class="history-section">
+                <h3>📜 История выигрышей</h3>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </div>
+
+        <div id="inventoryTab" class="tab-content" style="display: none;">
+            <div class="inventory-section">
+                <h2>🎒 Мой инвентарь</h2>
+                <div class="inventory-grid" id="inventoryGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-popup" id="resultPopup" style="display: none;">
+        <div class="popup-content">
+            <h3>🎉 Поздравляем!</h3>
+            <div class="prize-display" id="prizeDisplay"></div>
+            <div class="prize-name" id="prizeName"></div>
+            <div class="prize-value" id="prizeValue"></div>
+            <div class="popup-buttons">
+                <button class="sell-btn-popup" id="sellBtnPopup">💰 Продать сразу</button>
+                <button class="close-btn" id="closeBtn">📦 В инвентарь</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="topup-popup" id="topupPopup" style="display: none;">
+        <div class="popup-content">
+            <h3>💎 Пополнить баланс</h3>
+            <div class="topup-options" id="topupOptions"></div>
+            <button class="close-btn" id="closeTopupBtn">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
